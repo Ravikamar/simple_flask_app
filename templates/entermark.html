@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <style>
 ul {
@@ -39,15 +39,15 @@ li a:hover:not(.active) {
     <li><a href="/subs">EnteredMarks</a></li>
 
 </ul>
-<h2>This is you subjectwise marks</h2>
-
-<table border="1">
-{% for key,value in sub.items() %}
-    <tr>
-    <th>{{key}}</th>
-    <td>{{value}}</td>
-    </tr>
-{% endfor %}
-</table>
+    <h3>Enter you marks</h3>
+    <form action="/subs" method="POST">
+        <p><h3>Physics</h3></p>
+        <p><input type="text" name="phy"/></p>
+        <p><h3>Chemistry</h3></p>
+        <p><input type="text" name="che"/></p>
+        <p><h3>Mathematics</h3></p>
+        <p><input type="text" name="math"/></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
 </body>
 </html>

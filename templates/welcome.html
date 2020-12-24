@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 <style>
 ul {
@@ -34,20 +33,11 @@ li a:hover:not(.active) {
 <body>
 
 <ul>
-  <li><a href="/user/{{ name }}">Home</a></li>
-  <li><a class="active" href="/entermark">Marks</a></li>
+    <li><a class="active" href="/user/{{ name }}">Home</a></li>
+    <li><a href="/entermark">Marks</a></li>
     <li><a href="/subs">EnteredMarks</a></li>
 
 </ul>
-<h2>This is you subjectwise marks</h2>
-
-<table border="1">
-{% for key,value in sub.items() %}
-    <tr>
-    <th>{{key}}</th>
-    <td>{{value}}</td>
-    </tr>
-{% endfor %}
-</table>
+    <h2>Hello {{name}}</h2>
 </body>
 </html>
